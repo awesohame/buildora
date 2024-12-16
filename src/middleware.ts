@@ -12,7 +12,6 @@ const isPublicRoute = createRouteMatcher([
 export default clerkMiddleware((auth, req) => {
   // Protect non-public routes
   if (!isPublicRoute(req)) {
-    // Use .protect() directly on the auth object
     auth.protect()
   }
 
