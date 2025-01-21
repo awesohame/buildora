@@ -15,7 +15,7 @@ import Link from 'next/link'
 
 export default async function Home() {
   const prices = await stripe.prices.list({
-    product: process.env.NEXT_PLURA_PRODUCT_ID,
+    product: process.env.NEXT_BUILDORA_PRODUCT_ID,
     active: true,
   })
 
@@ -29,7 +29,7 @@ export default async function Home() {
         <p className="text-center">Run your agency, in one place</p>
         <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
           <h1 className="text-9xl font-bold text-center md:text-[300px]">
-            Plura
+            Buildora
           </h1>
         </div>
         <div className="flex justify-center items-center relative md:mt-[-70px]">
@@ -51,7 +51,7 @@ export default async function Home() {
           ready to commit you can get started for free.
         </p>
         <div className="flex  justify-center gap-4 flex-wrap mt-6">
-          {prices.data.map((card) => (
+          {prices.data.map((card: any) => (
             //WIP: Wire up free product from stripe
             <Card
               key={card.nickname}
