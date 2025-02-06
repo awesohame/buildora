@@ -13,6 +13,17 @@ body {
   box-sizing: border-box;
 }
 
+/* Hide scrollbars while keeping scrolling functional */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
 /* 
 R (0)
 G (110)
